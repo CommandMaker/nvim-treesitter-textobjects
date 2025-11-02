@@ -120,6 +120,10 @@
 (assignment_statement
   (variable_list) @assignment.inner)
 
+(field
+  name: (_) @assignment.lhs
+  value: (_) @assignment.inner @assignment.rhs) @assignment.outer
+
 ; scopename
 ; statement
 (statement) @statement.outer
